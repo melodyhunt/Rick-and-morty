@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.Alive{
+color: greenyellow;
+
+}
+.Dead{
+  background-color: red;
+}
+
+.Unknown{
+  background-color: gray;
+}

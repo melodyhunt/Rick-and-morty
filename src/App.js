@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/navbar";
+import React, { useEffect, useState } from "react";
+import Characters from "./components/characters";
 
 function App() {
+  const [characters, setcharacters] = useState([]);
+
+  const initialurl = "https://rickandmortyapi.com/api/character";
+
+  const fetchCharacters = (initialurl) => {
+    fetch(initialurl)
+      .then((response) => response.json())
+      .then((data) => setcharacters(data.results))
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchCharacters(initialurl);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-fondo">
+      <Navbar />
+      <div className="">
+        <Characters characters={characters} />
+      </div>
     </div>
   );
 }
