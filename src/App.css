@@ -39,12 +39,15 @@
 
 .Alive{
 color: greenyellow;
+margin-top: 3px;
 
 }
 .Dead{
-  background-color: red;
+  color: red;
+  margin-top: 3px;
 }
 
-.Unknown{
-  background-color: gray;
+.unknown{
+  color: gainsboro;
+  margin-top: 3px;
 }

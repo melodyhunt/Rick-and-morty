@@ -3,8 +3,8 @@ import Logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <header className="bg-black">
-      <img src={Logo} alt="logo" className="w-64 ml-8 py-1" />
+    <header className="bg-fondo">
+      <img src={Logo} alt="logo" className="w-64 py-1 ml-8" />
     </header>
   );
 };

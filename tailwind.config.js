@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: "Syne Mono",
+        primary: "Merriweather Sans",
         secundary: "Rubik Wet Paint",
       },
       colors: {
