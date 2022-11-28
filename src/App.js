@@ -41,7 +41,12 @@ function App() {
         onNext={onNext}
       />
       <Characters characters={characters} />
-      <Pagination prev={info.prev} next={info.next} />
+      <Pagination
+        prev={info.prev}
+        next={info.next}
+        onPrevius={onPrevius}
+        onNext={onNext}
+      />
     </div>
   );
 }
